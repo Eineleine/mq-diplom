@@ -87,6 +87,31 @@
     text-align: center;
   }
   /* ------------------Main---------------- */
+  .banner-section {
+    display: flex;
+  }
+  .banner-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-family: "OpenSans-Bold";
+    margin: 0 auto;
+    padding-left: 6px;
+  }
+  .banner-title:after {
+    content: '';
+    width: 66px;
+    border-bottom: 3px solid #b59f5b;
+    display: block;
+    text-align: center;
+    margin: 11px auto 28px; 
+    opacity: 0.4;
+  }
+  .banner-card {
+    width: 414px;
+    height: 319px;
+    background-color: #eff6f1;
+  }
   .wrapper {
     width: 1170px;
     justify-content: space-between;
