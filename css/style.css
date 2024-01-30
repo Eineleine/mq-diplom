@@ -87,15 +87,23 @@
     text-align: center;
   }
   /* ------------------Main---------------- */
+  .banner {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
   .banner-section {
     display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
   }
   .banner-title {
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
     font-family: "OpenSans-Bold";
-    margin: 0 auto;
+    margin: auto;
     padding-left: 6px;
   }
   .banner-title:after {
@@ -108,9 +116,49 @@
     opacity: 0.4;
   }
   .banner-card {
-    width: 414px;
-    height: 319px;
+    min-height: 319px;
     background-color: #eff6f1;
+    background-image: url("../images/trend1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-transform: uppercase;
+    position: relative;
+    background-color: #000000;
+    z-index: 0;
+    padding-bottom: 120px;
+    margin: 0 auto;
+  }
+  .banner-card:nth-child(2) {
+    background-image: url("../images/trend2.jpg");
+  }
+  .banner-card:nth-child(3) {
+    background-image: url("../images/trend3.jpg");
+  }
+  .banner-card:nth-child(4) {
+    background-image: url("../images/trend4.jpg");
+  }
+  .banner-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  .banner-card-text {
+    border: 3px solid #b59f5b;
+    text-align: left;
+  }
+  .banner-cards-title {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
   }
   .wrapper {
     width: 1170px;
