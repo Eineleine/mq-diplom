@@ -11,7 +11,8 @@
     font-style: normal;
   }
   html, body {
-    width: 100%
+    width: 100%;
+    overflow-x: hidden; 
   }
   body, ul, figure, h1, p {
     margin: 0 auto;
@@ -57,7 +58,9 @@
     justify-content: space-between;
     width: 71%;
     margin: 0 auto;
-    padding-top: 25px;
+    padding-top: 24px;
+    position: relative;
+
   }
   .logo {
     width: 179px;
@@ -68,12 +71,14 @@
     cursor: pointer;
   }
   .header-menu-button {
-    position: relative;
+    position: absolute;
     border: none;
     background: transparent;
     width: 23px;
     height: 20px;
     margin-top: 31px;
+    top: 0;
+    right: 0;
   }
   .header-menu-button::before,
   .header-menu-button::after {
@@ -160,6 +165,7 @@
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
   }
   .banner-card:nth-child(2) {
     background-image: url("../images/trend2.jpg");
@@ -383,7 +389,7 @@
     padding-left: 13px;
   }
   .subscribe-field {
-    width: 270px;
+    width: 222px;
     height: 48px;
     opacity: 0.541;
     font-size: 13px;
@@ -479,6 +485,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 3;
   }
   .popup-content {
     background: #ffffff;
@@ -487,14 +494,14 @@
     padding: 47px 30px 50px 28px;
     box-sizing: border-box;
     position: relative;
-    z-index: 2;
+    z-index: 4;
     font-size: 13px;
   }
   .popup-close {
     position: absolute;
     color: #ffffff;
-    right: -20px;
-    top: -50px;
+    right: -2px;
+    top: -26px;
     cursor: pointer;
   }
   .popup-close-svg {
@@ -549,6 +556,10 @@
     color: #757776;
     border: none;
   }
+  .radio-group {
+    display: flex;
+
+  }
   .popup-radio-title {
     display: inline-block;
     margin: 7px 11px 0px 0px;
@@ -560,7 +571,7 @@
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    background-image: url("../svg/form-circle.svg");
+    background-image: url("../svg/form-empty-circle.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 18px;
@@ -569,8 +580,8 @@
     outline: 2px solid #b59f5b;
     outline-offset: 2px;
   }
-  .popup-radio:checked ~.popup-radio-title::before {
-    background-image: url("../svg/form-empty-circle.svg");
+  .popup-radio:checked ~ .popup-radio-title::before {
+    background-image: url("../svg/form-circle.svg");
   }
   .popup-radio {
     position: absolute;
@@ -606,15 +617,6 @@
     cursor: pointer;
     background-color: #323232;
   }
-  .btn {
-    display: inline-block;
-    min-width: 100px;
-    padding: 10px;
-    color: #ffffff;
-    background: red;
-    cursor: pointer;
-    display: none;
-  }
   .popup-close-background {
     position: absolute;
     width: 100%;
@@ -641,18 +643,22 @@
     display: flex;
     flex-direction: column;
   }
-  .bottom-banner-img {
+  .bottom-banner-pict {
     width: 100%;
+    height: 202px;
+    opacity: 0.6;
+    z-index: 0;
   }
   .bottom-banner-card-text {
     width: 115%;
     border: 3px solid #b59f5b;
     box-sizing: border-box;
     text-align: left;
-    padding: 46px 22px 31px 17px;
+    padding: 46px 22px 26px 17px;
     margin-top: -31px;
     margin-left: -20px;
     flex-grow: 1;
+    z-index: 1;
   }
   .banner-card-title {
     font-size: 20px;
@@ -664,6 +670,7 @@
   .banner-desc {
     font-size: 15px;
     color: #0f0d0e;
+    line-height: 22px;
   }
   .banner-link {
     color: #b59f5b;
@@ -671,7 +678,7 @@
   .banner-content {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 23px;
   }
   .banner-footer {
     display: flex;
@@ -760,8 +767,13 @@
       padding-bottom: 204px;
     }
     .header-menu {
-      padding-top: 173px;
+      padding-top: 224px;
       width: 75%;
+      justify-content: center;
+    }
+    .header-menu-button::after,
+    .header-menu-button::before {
+      left: -16px;
     }
     .logo {
       width: 271px;
@@ -810,7 +822,7 @@
       width: 91%;
       flex-direction: column;
       padding: 42px 10px 45px 11px;
-      margin: 0;
+      margin: 0 auto;
     }
     .news {
       width: 100%;
@@ -871,10 +883,19 @@
       width: 100%;
     }
     .search-group {
+      width: 85%;
+    }
+    .search-field {
       width: 100%;
     }
     .button-search {
       width: 15%;
+    }
+    .subscribe-form {
+      padding-left: 0;
+    }
+    .subscribe-field {
+      width: 100%;
     }
     .subscribe-button {
       width: 100%;
@@ -892,26 +913,300 @@
     .themes-list {
       padding-left: 0;
     }
+    .themes-text {
+      width: 100%;
+    }
+    .popup-content {
+      width: 330px;
+      height: 545px;
+      padding: 24px 27px 31px 23px;
+    }
+    .popup-close {
+      right: 1px;
+      top: -34px;
+    }
+    .popup-close-svg {
+      width: 28px;
+      height: 28px;
+    }
+    .popup-title {
+      font-size: 16px;
+    }
+    .select {
+      margin-top: 12px;
+    }
+    .popup-group {
+      margin-bottom: 30px;
+    }
+    .popup-radio-title {
+      margin: 10px 32px 0px 0px;
+    }
+    .popup-radio-title::before {
+      margin-right: 5px;
+      width: 25px;
+      height: 25px;
+      background-size: 25px;
+    }
+    .popup-radio:focus ~ .popup-radio-title::before {
+      outline: 2px solid #b59f5b;
+      outline-offset: 2px;
+    }
+    .popup-radio:checked ~ .popup-radio-title::before {
+      background-image: url("../svg/form-circle.svg");
+    }
+    .popup-textarea {
+      padding-left: 20px;
+      padding-top: 23px;
+    }
+    .popup-button {
+      margin-top: 0;
+    }
     .bottom-banner {
-      width: 79%;
+      width: 80%;
       padding: 0;
+      margin: 0 auto 40px auto;
     }
     .bottom-banner-section {
       flex-direction: column;
+      gap: 31px;
     }
     .bottom-banner-card {
       width: 100%;
     }
+    .bottom-banner-pict {
+      width: 100%;
+      min-height: 283px;
+    }
     .bottom-banner-card-text {
-      width: 116%;
-      top: 263px;
-      padding: 49px 22px 31px 17px;
+      max-width: 114%;
+      padding: 49px 22px 24px 17px;
+    }
+    .banner-card-title {
+      font-size: 17px;
+      line-height: 22px;
+    }
+    .banner-button {
+      width: 50%;
+    }
+    .footer-menu {
+      width: 91%;
+    }
+    .footer-copyright {
+      margin-top: 39px;
     }
   }
-
+  @media (max-width: 640px) and (orientation: landscape) {
+    .banner-section {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .banner-card {
+      width: 49%;
+      min-height: 245px;
+    }
+    .banner-card-text {
+      margin: 0px 16px 14px 18px;
+      padding: 26px 26px 31px 29px;
+    }
+  }
   @media (min-width: 641px) and (max-width: 1200px) {
+    .header {
+      background-image: url("../images/banner-bg-tablet.jpg");
+      padding-bottom: 107px;
+    }
+    .header-menu {
+      padding-top: 42px;
+      width: 91%;
+    }
+    .logo {
+      width: 159px;
+      padding: 0;
+    }
     .header-menu-button {
+      margin-top: 53px;
+    }
+    .header-menu-button::before {
+      left: -34px;
+    }
+    .header-menu-button::after {
+      left: -34px;
+    }
+    .header-list {
       display: none;
+    }
+    .header-title {
+      font-size: 40px;
+      line-height: 55px;
+      width: 80%;
+      margin: 86px auto 7px auto;
+    }
+    .banner {
+      margin-top: 42px;
+    }
+    .banner-title {
+      font-size: 18px;
+    }
+    .banner-title:after {
+      margin: 11px auto 19px;
+    }
+    .banner-section {
+      flex-wrap: wrap;
+    }
+    .banner-card {
+      width: 49%;
+      min-height: 245px;
+    }
+    .banner-cards-title {
+      font-size: 17px;
+    }
+    .banner-card-text {
+      margin: 0px 16px 14px 18px;
+      padding: 26px 26px 31px 29px;
+    }
+    .wrapper {
+      width: 92%;
+      padding: 48px 16px 0px 16px;
+    }
+    .news {
+      width: 55%;
+    }
+    .cards-img-wrap {
+      flex-direction: column;
+    }
+    .cards-img-wrap:nth-last-child(1) {
+      margin-bottom: 55px;
+    }
+    .cards-info {
+      padding-left: 0;
+      margin-top: 23px;
+    }
+    .cards-title {
+      font-size: 17px;
+      line-height: 22px;
+    }
+    .cards-wrap-content > p {
+      margin-top: 31px;
+    }
+    .aside-news {
+      width: 42%;
+    }
+    .aside-news-section:not(:first-child) {
+      padding-left: 4px;
+    }
+    .aside-search {
+      width: 100%;
+    }
+    .search-group {
+      width: 80%;
+    }
+    .search-field {
+      width: 100%;
+    }
+    .button-search {
+      width: 18%;
+    }
+    .subscribe-field {
+      width: 100%;
+    }
+    .subscribe-button {
+      width: 93%;
+      margin-left: 12px;
+    }
+    .popup-content {
+      width: 390px;
+      height: 595px;
+      padding: 49px 31px 55px 29px;
+    }
+    .popup-close {
+      right: 1px;
+      top: -34px;
+    }
+    .popup-close-svg {
+      width: 28px;
+      height: 28px;
+    }
+    .popup-title {
+      font-size: 18px;
+    }
+    .select {
+      margin-top: 12px;
+    }
+    .popup-group {
+      margin-bottom: 30px;
+    }
+    .popup-radio-title {
+      margin: 10px 32px 0px 0px;
+    }
+    .popup-radio-title::before {
+      margin-right: 5px;
+      width: 25px;
+      height: 25px;
+      background-size: 25px;
+    }
+    .popup-radio:focus ~ .popup-radio-title::before {
+      outline: 2px solid #b59f5b;
+      outline-offset: 2px;
+    }
+    .popup-radio:checked ~ .popup-radio-title::before {
+      background-image: url("../svg/form-circle.svg");
+    }
+    .popup-textarea {
+      padding-left: 20px;
+      padding-top: 23px;
+    }
+    .popup-button {
+      margin-top: 0;
+    }
+    .bottom-banner {
+      width: 85%;
+      padding: 10px 16px 0px 16px;
+      margin: 0 auto 23px auto;
+    }
+    .bottom-banner-section {
+      flex-wrap: wrap;
+      padding-top: 9px;
+      justify-content: flex-start;
+      gap: 0;
+    }
+    .bottom-banner-card {
+      width: 38%;
+      margin-bottom: 25px;
+    }
+    .bottom-banner-card:first-child {
+      margin-right: 18%;
+    }
+    .bottom-banner-card-text {
+      width: 136%;
+      padding: 51px 20px 26px 23px;
+      margin-top: -11px;
+      margin-left: -27px;
+    }
+    .banner-card-title {
+      font-size: 17px;
+    }
+    .footer-menu {
+      width: 91%;
+    }
+    .footer-copyright {
+      margin-top: 39px;
+    }
+  }
+  @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+    .banner-card {
+      width: 24%;
+      min-height: 160px;
+    }
+    .banner-card-text {
+      margin: 0px 16px 14px 18px;
+      padding: 10px 0px 6px 9px;
+    }
+    .cards-list-tags-items {
+      font-size: 11px;
+      font-family: "OpenSans-Bold";
+    }
+    .banner-cards-title {
+      font-size: 12px;
+      line-height: 17px;
     }
   }
   @media (min-width: 1201px) {
