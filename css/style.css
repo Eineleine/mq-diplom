@@ -4,19 +4,20 @@
     font-weight: normal;
     font-style: normal;
   }
-  /* @font-face { 
+@font-face { 
     src: url("../fonts/OpenSans-Bold.woff");
-    font-family: "OpenSans-Bold";
-    font-weight: 700;
+    font-family: "OpenSans";
+    font-weight: bold;
     font-style: normal;
-  }*/
+  }
   html, body {
     width: 100%;
     overflow-x: hidden; 
   }
   body, ul, figure, h1, p {
     margin: 0 auto;
-    font-family: "OpenSans", sans-serif;  
+    font-family: "OpenSans", sans-serif;
+    font-weight: normal;
     padding: 0;
   }
   a {
@@ -145,9 +146,6 @@
     text-align: center;
     margin: 11px auto 28px; 
     opacity: 0.4;
-  }
-  .banner-title:hover {
-    color: #b59f5b;
   }
   .banner-card {
     width: 25%;
@@ -343,12 +341,8 @@
     box-sizing: border-box;
   }
   .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
     padding: 0;
     border: 0;
-    clip: rect(0 0 0 0);
     overflow: hidden;
   } 
   .search-field {
@@ -571,16 +565,16 @@
     background-position: center center;
     background-size: 18px;
   }
-  .popup-radio:focus ~ .popup-radio-title::before {
+  .radio-hidden:focus ~ .popup-radio-title::before {
     outline: 2px solid #b59f5b;
     outline-offset: 2px;
   }
-  .popup-radio:checked ~ .popup-radio-title::before {
+  .radio-hidden:checked ~ .popup-radio-title::before {
     background-image: url("../svg/form-circle.svg");
   }
-  .popup-radio {
+  .radio-hidden {
     position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(0 0 0 0);
     height: 1px;
     width: 1px;
   }
@@ -707,6 +701,7 @@
   .banner-button:hover {
     background-color: #323232;
     border: none;
+    cursor: pointer;
   }
   /* ------------------------Footer-------------------- */
   .footer {
@@ -846,7 +841,7 @@
       font-size: 16px;
       line-height: 20px;
       margin-bottom: 14px;
-    margin-top: 7px;
+      margin-top: 7px;
     }
     .cards-content {
       font-size: 14px;
