@@ -1,22 +1,22 @@
 @font-face {
     src: url("../fonts/OpenSans-Regular.woff");
-    font-family: "OpenSans-Regular";
-    font-weight: 400;
+    font-family: "OpenSans";
+    font-weight: normal;
     font-style: normal;
   }
-  @font-face {
+  /* @font-face { 
     src: url("../fonts/OpenSans-Bold.woff");
     font-family: "OpenSans-Bold";
     font-weight: 700;
     font-style: normal;
-  }
+  }*/
   html, body {
     width: 100%;
     overflow-x: hidden; 
   }
   body, ul, figure, h1, p {
     margin: 0 auto;
-    font-family: "OpenSans-Regular", sans-serif;  
+    font-family: "OpenSans", sans-serif;  
     padding: 0;
   }
   a {
@@ -112,7 +112,7 @@
   }
   .header-title {
     width: 42%;
-    font-family: "OpenSans-Bold";
+    font-weight: bold;
     font-size: 45px;
     line-height: 75px;
     margin: 98px auto 7px auto;   
@@ -134,7 +134,7 @@
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     margin: auto;
   }
   .banner-title:after {
@@ -196,7 +196,7 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #ffffff;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     padding-top: 7px;
   }
   .banner-cards-title:hover {
@@ -232,18 +232,18 @@
     text-align: left;
     padding-left: 31px;
   }
-  .cards-list-tags-items {
+  .cards-tags-items {
     text-transform: uppercase;
     font-size: 14px;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     padding-right: 20px;
     list-style-type: none;
   }
-  .cards-list-tags-items:hover {
+  .cards-tags-items:hover {
     text-decoration: underline;
     color: #b59f5b;
   }
-  .cards-list-tags-link {
+  .cards-tags-link {
     color: #b59f5b;
     display: block;
   }
@@ -252,7 +252,7 @@
     font-size: 20px;
     line-height: 24px;
     color: #0f0d0e;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     margin-top: 7px;
     margin-bottom: 28px;
   }
@@ -267,7 +267,7 @@
   .cards-author {
     font-size: 12px;
     color: #000000;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
   }
   .cards-content {
     font-size: 15px;
@@ -295,7 +295,7 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #0f0d0e;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     margin: 0 auto;
   }
   .aside-title::after {
@@ -331,7 +331,7 @@
     line-height: 17px;
     text-transform: uppercase;
     color: #000000;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
   }
   .aside-caption:hover {
     color: #b59f5b;
@@ -407,7 +407,7 @@
     font-size: 14px;
     line-height: 40px;
     text-transform: uppercase;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     color: #ffffff;
     border: none;
     margin-left: 13px;
@@ -425,7 +425,7 @@
     font-size: 12px;
     list-style-type: none;
     text-transform: uppercase;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     height: 30px;
     border: 3px solid #eeeeee;
     box-sizing: border-box;
@@ -448,7 +448,7 @@
   }
   .themes-text {
     font-size: 14px;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     list-style-type: none;
     text-transform: capitalize;
     border-bottom: 1px solid #eeeeee;
@@ -465,7 +465,7 @@
     font-size: 12px;
     line-height: 36px;
     color: #b59f5b;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     vertical-align: super;
     display: inline-block;
     padding-left: 3px;
@@ -518,7 +518,7 @@
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     margin: auto;
   }
   .popup-title:after {
@@ -603,7 +603,7 @@
     font-size: 14px;
     line-height: 40px;
     text-transform: uppercase;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     color: #ffffff;
     border: none;
   }
@@ -643,7 +643,7 @@
     opacity: 0.6;
     z-index: 0;
   }
-  .bottom-banner-card-text {
+  .bottom-banner-text {
     width: 115%;
     border: 3px solid #b59f5b;
     box-sizing: border-box;
@@ -658,7 +658,7 @@
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     margin-bottom: 3px;
   }
   .banner-desc {
@@ -688,7 +688,7 @@
     font-size: 21px;
     text-transform: uppercase;
     color: #0f0d0e;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
   }
   .banner-old-price {
     font-size: 14px;
@@ -698,7 +698,7 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #ffffff;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     width: 140px;
     height: 48px;
     background-color: #b59f5b;
@@ -751,7 +751,7 @@
   .copyright-title {
     font-size: 12px;
     color: #999999;
-    font-family: "OpenSans-Bold";
+    font-weight: Bold;
     padding-left: 12px;
   }
 
@@ -968,7 +968,7 @@
       width: 100%;
       min-height: 283px;
     }
-    .bottom-banner-card-text {
+    .bottom-banner-text {
       max-width: 114%;
       padding: 49px 22px 24px 17px;
     }
@@ -1163,7 +1163,7 @@
     .banner-card-first {
       margin-right: 18%;
     }
-    .bottom-banner-card-text {
+    .bottom-banner-text {
       width: 136%;
       padding: 51px 20px 26px 23px;
       margin-top: -11px;
@@ -1188,9 +1188,9 @@
       margin: 0px 16px 14px 18px;
       padding: 10px 0px 6px 9px;
     }
-    .cards-list-tags-items {
+    .cards-tags-items {
       font-size: 11px;
-      font-family: "OpenSans-Bold";
+      font-weight: Bold;
     }
     .banner-cards-title {
       font-size: 12px;
